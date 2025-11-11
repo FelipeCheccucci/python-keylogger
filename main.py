@@ -28,15 +28,20 @@ registrando = False
 
 def iniciar_registro():
     global registrando
-    if not registrando:
+    if registrando:
+        mbox.showinfo('Aviso', 'O registro já está iniciado.')
+    else:
         registrando = True
         threading.Thread(target=loop_registro, daemon=True).start()
         mbox.showinfo('Registro', 'Captura iniciada.')
 
 def parar_registro():
     global registrando
-    registrando = False
-    mbox.showinfo('Registro', 'Captura finalizada.')
+    if not registrando:
+        mbox.showinfo('Aviso', 'Nenhum registro foi iniciado.')
+    else:
+        registrando = False
+        mbox.showinfo('Registro', 'Captura finalizada.')
 
 def loop_registro():
     global registrando
