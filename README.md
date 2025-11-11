@@ -43,10 +43,11 @@ Execute o script a partir do terminal:
 python main.py
 ```
 Você verá uma confirmação no console.
-Siga as instruções para iniciar a captura de teclas.
+Para iniciar a captura de teclas, clique no botão 'Começar a registrar'.
 
 ### 5. Encerramento
-Para parar de registrar as teclas, pressione a tecla Esc.
+Para parar de registrar as teclas, clique no botão 'Parar registro'.
+Agora você pode ver o arquivo com os logs das teclas. Basta clicar no botão 'Gerar arquivo com logs'
 
 ## 📝 Resultados 
 Após a execução, um arquivo chamado log.txt será criado (ou atualizado) no mesmo diretório do script.
